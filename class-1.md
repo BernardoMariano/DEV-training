@@ -2,7 +2,7 @@
 
 Existe um padrão a ser seguidos pelos desenvolvedores das engines, mas como são projetos e equipes diferentes, acabam saindo algumas particularidades entre cada uma, por isso o resultado da página varia, principalmente tratando-se de CSS :D
 Alguns exemplos:
-- No FF, a regra `line-height` não afeta o padding de elementos `inline`
+- No FF, a regra `line-height` não afeta o `padding` de elementos `inline`
 - O IE7 não suporta `border-radius` e `min-height` e nem `list-style-image` se os `<li>` estiverem com algum `float`
 Por essas e outras, usamos o normalize.css e o reset.css
 
