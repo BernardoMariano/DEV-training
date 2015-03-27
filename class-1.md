@@ -8,9 +8,9 @@ Por essas e outras, usamos o normalize.css e o reset.css
 
 # 2. W3C/WHATWG
 
-O World Wide Web Consortium (W3C) "é uma comunidade internacional que desenvolve padrões com o objetivo de garantir o crescimento da web, (...) e conduzí-la ao seu potencial máximo."
+O _World Wide Web Consortium_ (W3C) "é uma comunidade internacional que desenvolve padrões com o objetivo de garantir o crescimento da web, (...) e conduzí-la ao seu potencial máximo."
 Ou seja, o W3C é o órgão que, internamente, discute e produz protocolos e diretrizes que garantam o crescimento a longo prazo da web.
-Já o Web Hypertext Application Technology Working Group (WHATWG) foi criado por Ian Hickson, insatisfeito com a lentidão e formato de discussão do W3C. Qualquer um pode se voluntariar ao WHATWG, e sua principal premissa é dar a merecida importância ao HTML, que algumas pessoas não estavam sentindo pelo W3C.
+Já o _Web Hypertext Application Technology Working Group_ (WHATWG) foi criado por Ian Hickson, insatisfeito com a lentidão e formato de discussão do W3C. Qualquer um pode se voluntariar ao WHATWG, e sua principal premissa é dar a merecida importância ao HTML, que algumas pessoas não estavam sentindo pelo W3C.
 
 # 3. WebKit x Gecko
 
