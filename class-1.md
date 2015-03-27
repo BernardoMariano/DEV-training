@@ -16,15 +16,15 @@ Já o Web Hypertext Application Technology Working Group (WHATWG) foi criado por
 
 Ambos seguem basicamente o memso fluxo, com algumas diferenças de nomenclaturas, como por exemplo:
 
-	1. Fluxo da Árvore de Renderização:
+	1. Fluxo da Árvore de Renderização
 		- Gecko: Frame Tree
 		- WebKit: Render Tree
 
-	2. Elementos da Árvore:
+	2. Elementos da Árvore
 		- Gecko: Frames
 		- WebKit: Render Objects
 
-	3. Posicionamento de Elementos:
+	3. Posicionamento de Elementos
 		- Gecko: Reflow
 		- WebKit: Layout
 
