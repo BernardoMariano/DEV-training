@@ -1,0 +1,78 @@
+<div class="star">
+    
+</div>
+<style>
+.star {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+}
+.blue {
+    background-color: blue;
+}
+</style>
+<script>
+;(function(window){
+    function Micro (elements) {
+        if (typeof elements === 'string') {
+            var elementsConstructor = elements,
+                elements = document.querySelectorAll(elements);
+        } else {
+            var elementsConstructor = '',
+                elements = [elements];
+        }
+        return {
+            on: function (action, behavior) {
+                for (var i = 0, total = elements.length; i < total; i++) {
+                    var el = elements[i];
+                    el.addEventListener(action, function (event) {
+                        behavior.call(el, event, elementsConstructor);
+                    });
+                }
+                return this;
+            },
+            animate: function (animation) {
+                var animateCore = function (el, prop, to) {
+                    var elStyle = parseInt(getComputedStyle(el)[prop]);
+                    if (++elStyle <= to) {
+                        el.style[prop] = elStyle + 'px';
+                        setTimeout(function () { animateCore(el, prop, to); });
+                    }
+                }
+                for (var i = 0, total = elements.length; i < total; i++) {
+                    var el = elements[i];
+                    for (prop in animation) {
+                        animateCore(el, prop, animation[prop]);
+                    }
+                }
+                return this;
+            },
+            addClass: function (newClasses) {
+                for (var i = 0, total = elements.length; i < total; i++) {
+                    var el = elements[i],
+                        classes = el.className,
+                        newClassesList = newClasses.split(' ');
+                    for (var j = 0, totalClasses = newClassesList.length; j < totalClasses; j++) {
+                        var newClass = newClassesList[j];
+                        if (classes.indexOf(newClass) >= 0) {
+                            newClasses = newClasses.replace(newClass, '');
+                        }
+                    }
+                    if (newClasses.length > 0) {
+                        el.className = classes + ' ' + newClasses;
+                    }
+                }
+                return this;
+            }
+        }
+    }
+    window.µ = Micro;
+    window.Micro = Micro;
+})(window);
+ 
+µ('.star').on('click', function (event) {
+    var el = µ(this);
+    el.animate({width: 200, height: 200});
+    el.addClass('blue');
+});
+</script>
