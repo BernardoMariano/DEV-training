@@ -1,0 +1,35 @@
+{
+  "name": "plugin-jsx",
+  "version": "0.1.1",
+  "description": "JSX loader plugin",
+  "main": "jsx",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/floatdrop/plugin-jsx.git"
+  },
+  "keywords": [
+    "jspm",
+    "jsx",
+    "loader",
+    "plugin"
+  ],
+  "author": "Vsevolod Strukchinsky <floatdrop@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/floatdrop/plugin-jsx/issues"
+  },
+  "homepage": "https://github.com/floatdrop/plugin-jsx",
+  "devDependencies": {
+    "connect": "^3.3.3",
+    "open": "0.0.5",
+    "serve-static": "^1.7.1"
+  },
+  "jspm": {
+    "dependencies": {
+      "react-tools": "npm:react-tools@^0.13.0-beta.1"
+    }
+  }
+}
