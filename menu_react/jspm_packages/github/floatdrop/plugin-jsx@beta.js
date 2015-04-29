@@ -1,0 +1,1 @@
+module.exports = require("github:floatdrop/plugin-jsx@beta/jsx");

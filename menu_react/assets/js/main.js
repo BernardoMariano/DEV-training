@@ -1,3 +1,12 @@
+// Renders the main Tab
+var ItemTab = React.createClass({
+    render: function() {
+        return (
+            <h1>{this.props.text}</h1>
+        );
+    }
+});
+
 // Renders <li>
 var MenuItem = React.createClass({
     getInitialState: function() {
@@ -7,10 +16,14 @@ var MenuItem = React.createClass({
             subMenu: item.menu ? <MenuList data={item.menu} /> : null
         }
     },
+    selectItem: function() {
+        return React.render(<ItemTab text={this.state.text} />,
+                            document.getElementById('tab'));
+    },
     render: function() {
         return (
             <li>
-                {this.state.text}
+                <span className="menu-item" onClick={this.selectItem}>{this.state.text}</span>
                 {this.state.subMenu}
             </li>
         );
@@ -56,4 +69,9 @@ var MenuList = React.createClass({
 React.render(
   <MenuList url='data.json' />,
   document.getElementById('menu-app')
+);
+
+React.render(
+  <ItemTab text="Selecione um item do menu" />,
+  document.getElementById('tab')
 );
