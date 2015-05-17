@@ -1,0 +1,22 @@
+import $ from 'jquery'
+import React from 'react'
+
+var MenuItem = React.createClass({
+    getInitialState: function() {
+        var item = this.props.data;
+        return {
+            text: item.text,
+            subMenu: item.menu ? <MenuList data={item.menu} /> : null
+        }
+    },
+    render: function() {
+        return (
+            <li>
+                {this.state.text}
+                {this.state.subMenu}
+            </li>
+        );
+    }
+});
+
+export default MenuItem;
